@@ -27,7 +27,10 @@ export const App = () => {
                 </div>
               </div>
               <div className="w-50 h-100">
-
+                <div className="w-100 h-100 my-3 d-flex flex-column justify-content-center align-items-center text-center px-3">
+                  <h1>Sample Data:</h1>
+                  <p>This area has no data so that you can inject your details and test an API of your own using MSAL for Token Authentication.</p>
+                </div>
               </div>
             </div>
           </AuthenticatedTemplate>
