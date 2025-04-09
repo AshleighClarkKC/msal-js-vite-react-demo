@@ -1,8 +1,5 @@
-/**
- *
- * 
- */
-export const MsalConfiguration = {
+
+export const msalConfiguration = {
 
     auth: {
         clientId: import.meta.env.VITE_CLIENT_ID,
@@ -16,12 +13,16 @@ export const MsalConfiguration = {
 
 }
 
-export const LoginRequestConfiguration = {
+export const loginRequestConfiguration = {
     scopes: [
         "User.Read"
     ]
 }
 
-export const GraphConfiguration = {
+export const logoutRequestConfiguration = {
+    postLogoutRedirectUri: import.meta.env.VITE_POST_LOGOUT_REDIRECT_URI
+}
+
+export const graphConfiguration = {
     profileEndpoint: import.meta.env.VITE_GRAPH_ME_ENDPOINT
 }
