@@ -10,12 +10,15 @@ export const BaseLayout = (props) => {
 
     const isAuthenticated = useIsAuthenticated()
 
-    return(
+    return (
         <div className="h-100 w-100">
             <div className="navbar navbar-light bg-light">
-            <div className='container-fluid m-2'>
-                    <a className='navbar-brand' href="/">Kaleidocode</a>
-                    { !isAuthenticated ? <SignInButton /> : <SignOutButton /> }
+                <div className='container-fluid m-2'>
+                    <a className='navbar-brand' href="/">Kaleidocode + Microsoft Entra</a>
+                    <div className="">
+
+                        {!isAuthenticated ? <SignInButton /> : <SignOutButton />}
+                    </div>
                 </div>
             </div>
             <div className='container-fluid h-content w-100'>

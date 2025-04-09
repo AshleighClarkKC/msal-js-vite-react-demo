@@ -3,6 +3,7 @@ import './App.css'
 
 import { BaseLayout } from './components/layouts/base-layout'
 import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react'
+import { ProfileLayout } from './components/layouts/profile-layout'
 
 export const App = () => {
 
@@ -16,7 +17,19 @@ export const App = () => {
             <p>Made with &#10084; using Vite + React.</p>
           </UnauthenticatedTemplate>
           <AuthenticatedTemplate>
-            
+            <div className="d-flex flex-row h-100 w-100">
+              <div className="w-50 h-100 d-flex flex-column">
+                <div className="w-100 h-50 my-3 d-flex flex-column justify-content-center align-items-center">
+                  <h1>Profile Data:</h1>
+                </div>
+                <div className="w-100 h-50 d-flex flex-column justify-content-start align-items-center">
+                  <ProfileLayout />
+                </div>
+              </div>
+              <div className="w-50 h-100">
+
+              </div>
+            </div>
           </AuthenticatedTemplate>
         </div>
       </BaseLayout>
